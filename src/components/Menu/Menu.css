@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.menu-container
+{
+    position: fixed;
+    width: 55px;
+    height: 100vh;
+    left:10px;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.6em;
+    z-index: 2;
+    /*Comment in production mode */
+    animation: fade-menu 7s ease forwards;
+
+}
+@keyframes fade-menu {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.menu-container-center
+{
+    width: 100%;
+}
+
+.center-vertical-bar 
+{
+    height: 120%;
+    width: 3px;
+    background-color: magenta;
+}
+ul{
+    list-style: none;
+}
+.vertical-bar
+{
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-elem-diamond
+{
+    /* l*sqrt(2) din width of sidebar */
+    height: 38px;
+    width: 38px; 
+    transform: translate(8.5px, 0px) rotate(45deg) ;
+    border: 2px solid magenta;
+    background-color: rgb(250, 161, 250);
+    margin: 8px 0px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    overflow: hidden;
+    position: relative;
+}
+/*Border anim */
+
+.list-elem-diamond span:nth-child(1){
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 0, 200);
+    transform: translateX(-150%);
+    animation: moveAnim_1 6s linear infinite;
+}
+@keyframes moveAnim_1{
+    0%{
+        transform: translateX(-150%); 
+    }
+    25%{
+        transform: translateX(50%)
+    }
+    50%{
+        transform: translateX(50%)
+    }
+    75%{
+        transform: translateX(50%)
+    }
+    100%{
+        transform: translateX(50%)
+    }
+}
+.list-elem-diamond span:nth-child(2){
+    position: absolute;
+    right: 0px;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(255, 0, 200);
+    transform: translateY(-100%);
+    animation: moveAnim_2 6s linear infinite;
+}
+@keyframes moveAnim_2{
+    0%{
+        transform: translateY(-100%); 
+    }
+    13%{
+        transform: translateY(-100%); 
+    }
+    38%{
+        transform: translateY(100%)
+    }
+    75%{
+        transform: translateY(100%)
+    }
+    100%{
+        transform: translateY(100%)
+    }
+}
+.list-elem-diamond span:nth-child(3){
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;    
+    background-color: rgb(255, 0, 200);
+    transform: translateX(50%);
+    animation: moveAnim_3 6s linear infinite;
+}
+@keyframes moveAnim_3{
+    0%{
+        transform: translateX(50%);
+    }
+    25%{
+        transform: translateX(50%);
+    }
+    50%{
+        transform: translateX(-150%)
+    }
+    100%{
+        transform: translateX(-150%)
+    }
+}
+.list-elem-diamond span:nth-child(4){
+    position: absolute;
+    left: 0px;
+    width: 2px;
+    height: 100%;
+    background-color: rgb(255, 0, 200);
+    transform: translateY(100%);
+    animation: moveAnim_4 6s linear infinite;
+}
+@keyframes moveAnim_4{
+    0%{
+        transform: translateY(100%);
+    }
+    36%{
+        transform: translateY(100%);
+    }
+    60%{
+        transform: translateY(-100%)
+    }
+    100%{
+        transform: translateY(-100%)
+    }
+}
+
+
+
+.list-elem-text
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-elem-text p 
+{
+    transform: rotate(-45deg);
+}
+.selected-text
+{
+    color: black;
+    font-weight: 900;
+    transition: color 1.4s ease;
+
+    
+}
+.selected-diamond
+{
+    -webkit-box-shadow: 0px 0px 14px 9px rgba(255,1,143,0.8); 
+box-shadow: 0px 0px 14px 9px rgba(255,1,143,0.8);
+transition: box-shadow 0.3s ease-in-out;
+}
+/*-------*/
+
