@@ -95,3 +95,18 @@
     height: 3px;
     background-color: magenta;
 }
+@media only screen and (max-width: 900px)
+{
+    .stack-container
+    {
+        min-width: 0px;
+        min-height: 0px;
+        font-size: 0.8em;
+    }
+    .stack-container img 
+    {
+        transform: scale(0.6);
+        padding: 0;
+        margin:0;
+    }
+}

@@ -206,6 +206,9 @@
     height: 10%;
     width: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*----*/
 .btn {
@@ -251,6 +254,28 @@
     font-size: 18px;
     font-weight: 100;
 }
-
-  
+/*Mobile optimization */
+.intro-container-mobile
+{
+    display: none;
+}
+@media only screen and (max-width: 900px)
+{
+    .intro-container
+    {
+        border: 1px solid red;
+    }
+    .png_neon
+    {
+        display: none;
+    }
+    .fake-intro
+    {
+        display: none;
+    }
+    .main-text-left
+    {
+        width: 100%;
+    }
+}
   

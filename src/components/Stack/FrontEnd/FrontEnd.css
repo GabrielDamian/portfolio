@@ -45,3 +45,48 @@
     height: 30%;
     object-fit: contain;
 }
+/*mobile */
+.mobile-front-end
+{
+    display: none;
+}
+.mobile-simple-wrappper
+{
+    display: none;
+}
+@media only screen and (max-width: 900px)
+{
+    .front-row-2 img 
+    {
+        margin:0px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    .frontend-container
+    {
+        display: none;
+    }
+    .mobile-front-end
+    {
+        display: block;
+        height: 100%;
+        
+    }
+    .mobile-simple-wrappper
+    {
+        
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .mobile-simple-wrappper img 
+    {
+        height: 50px;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -61,6 +61,12 @@ const Intro = () => {
       }
     return (
         <>
+        {/* Mobile version */}
+        {/* <div className="intro-container-mobile-adasdasdad">
+         
+        </div> */}
+
+
         <div className="intro-container" id="intro">
             {/* <img className="bg-intro" src={bg} alt="bg"/> */}
             <Particles

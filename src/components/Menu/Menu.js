@@ -1,5 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import './Menu.css';
+import BurgerMenu from '../../images/burger-menu.png';
+
+
 
 const Menu = ({selectedItem,forceMeScroll}) => {
     const [selected, setSelected] = useState(selectedItem);
@@ -23,9 +26,72 @@ const Menu = ({selectedItem,forceMeScroll}) => {
                 </>
             )
     }
-
     
+
+    //Burger logic
+    const [customBurgerClass, setCustomBurgerClass] = useState('menu-container-btn-content');
+    const handleBurgerClick = ()=>{
+        if(customBurgerClass == 'menu-container-btn-content' || customBurgerClass == 'menu-container-btn-content ceva')
+        {
+            //burger is false, tranform in true
+            console.log("case a")
+            setCustomBurgerClass('menu-container-btn-content menu-container-btn-content-y-axys-back'); 
+        }
+        else 
+        {
+            //burger is true, trasform in false
+            console.log("TEST:", customBurgerClass);
+            console.log("case b")
+            setCustomBurgerClass('menu-container-btn-content ceva')
+        }
+    }
+    const handleMouseIn = ()=>{
+        console.log("in")
+        setCustomBurgerClass('menu-container-btn-content menu-container-btn-content-y-axys-back')
+    };
+    const handleMouseOut = ()=>{
+        console.log()
+        setCustomBurgerClass('menu-container-btn-content ceva')
+    }
     return (
+        <>
+        {/* Mobile burger */}
+        <div onClick={()=>handleBurgerClick()} onMouseOut={()=>handleMouseOut()}onMouseOver={()=>handleMouseIn()} className='menu-container-mobile'>
+           <div className={
+               customBurgerClass == 'menu-container-btn-content menu-container-btn-content-y-axys-back'?
+               'menu-container-mobile-btn rotate_right':
+               customBurgerClass == 'menu-container-btn-content ceva'?
+               'menu-container-mobile-btn rotate_back':
+               'menu-container-mobile-btn'
+           }>
+               <img src={BurgerMenu} />
+           </div>
+           <div className={customBurgerClass}>
+               <div className="menu-btn-item">
+                   <div className="menu-btn-item-square" onClick={()=>{handleMenuClick(1)}}>
+                       <div className="no-rotation">
+                           <span>Intro</span>
+                       </div>
+                   </div>
+               </div>
+               <div className="menu-btn-item">
+                   <div className="menu-btn-item-square" onClick={()=>{handleMenuClick(2)}}>
+                        <div className="no-rotation">
+                           <span>Stack</span>
+                        </div>
+                   </div>
+               </div>
+               <div className="menu-btn-item">
+                    <div className="menu-btn-item-square" onClick={()=>{handleMenuClick(3)}}>
+                        <div className="no-rotation">
+                           <span>Projects</span>
+                        </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+
+        {/* Desktop menu */}
         <div className="menu-container">
             <div className="menu-container-center">
                 <ul>
@@ -98,7 +164,9 @@ const Menu = ({selectedItem,forceMeScroll}) => {
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>  
+        </>
+        
     )
 }
 

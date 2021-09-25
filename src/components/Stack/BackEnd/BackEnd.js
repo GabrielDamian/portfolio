@@ -9,6 +9,17 @@ import Redis from '../../../images/FrontEnd/redis.png';
 
 const BackEnd = () => {
     return (
+        <>
+        <div className="mobile-front-end">
+            <div className="mobile-simple-wrappper">
+                <img src={Node} alt="react icon"/>
+                <img src={Mongo} alt="next icon"/>
+                <img src={GraphQL} alt="next icon"/>
+                <img src={Socket} alt="next icon"/>
+                <img src={JWT} alt="next icon"/>
+                <img src={Redis} alt="next icon"/>
+            </div>            
+        </div>
         <div className="frontend-container">
             <div className="front-row-1">
                 <img src={Node} alt="react icon"/>
@@ -24,6 +35,7 @@ const BackEnd = () => {
                 
             </div>
         </div>
+        </>
     )
 }
 
