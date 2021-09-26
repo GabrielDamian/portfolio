@@ -103,6 +103,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className="loading-anim">
+        <div class="loadingOuter">
+		    <div class="loadingInner"></div>
+	    </div>
+      </div>
       <Intro />
       <Stack />
       <Menu selectedItem={selected} forceMeScroll={forceMeScroll}/>

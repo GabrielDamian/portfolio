@@ -20,8 +20,8 @@
     object-fit: cover;
     /* animation: fade_neon 3s ease; */
     z-index: 2;
-
     animation: fadein 7s ease;
+    animation-delay: 3s;
 }
 /*#4*/
 .fake-intro{
@@ -33,6 +33,7 @@
     object-fit: cover;
     z-index: 1;
     animation: intro-me 4s ease;
+    animation-delay: 3s;
 
 }
 @keyframes fadein{
@@ -90,7 +91,7 @@
     -webkit-text-stroke:0.3vw #383d52;
     text-transform: uppercase;
     animation: border-bottom-main 2s ease forwards;
-    animation-delay: 4.5s;
+    animation-delay: 7.5s;
 }
 
 .main-text-left-full-stack h2:before {
@@ -105,6 +106,7 @@
     border-right: 2px solid magenta;
     overflow: hidden;
     animation: test 3s linear forwards;
+    animation-delay: 3s;
 }
  
 @keyframes test {
@@ -148,7 +150,7 @@
     -webkit-text-stroke:0.3vw #383d52;
     text-transform: uppercase;
     animation: border-bottom-main 2s ease forwards;
-    animation-delay: 4.5s;
+    animation-delay: 7.5s;
 }
 
 .main-text-left-description h2:before {
@@ -163,6 +165,7 @@
     border-right: 2px solid magenta;
     overflow: hidden;
     animation: test 3s linear forwards;
+    animation-delay: 3s;
 }
 
 /*name */
@@ -184,7 +187,7 @@
     -webkit-text-stroke:0.3vw #383d52;
     text-transform: uppercase;
     animation: border-bottom-main 2s ease forwards;
-    animation-delay: 4.5s;
+    animation-delay: 7.5s;
 }
 
 .main-text-left-name h2:before {
@@ -199,6 +202,7 @@
     border-right: 2px solid magenta;
     overflow: hidden;
     animation: test 3s linear forwards;
+    animation-delay: 3s;
 }
 /*More btn */
 .main-text-left-button
